@@ -1,0 +1,157 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<title>My Google Map</title>
+	<style>
+		#map{
+			height:600px;
+			width:100%;
+		}
+	</style>
+	
+	</head>
+	<body>
+	<h1>My Google Maps</h1>
+	<div id="map"></div>
+	<script>
+		function initMap(){
+		//map options
+			var options = {
+				zoom:14,
+				center:{lat:6.8865,lng:79.8563}
+			}
+			
+			//new map
+			var map = new 
+			google.maps.Map(document.getElementById('map'),options);
+			
+			
+			
+			
+			//Add marker manually for each coordinates
+			//Add marker for Abans Showroom
+			var marker = new google.maps.Marker({
+				position:{lat:6.9035234,lng:79.8518956},
+				map:map
+			});
+			
+			//Add marker for Samsung Showroom
+			var marker1 = new google.maps.Marker({
+				position:{lat:6.8966664,lng:79.8567563},
+				map:map
+			});
+			
+			//Add marker for Unity mobiles
+			var marker2 = new google.maps.Marker({
+				position:{lat:6.8941,lng:79.855},
+				map:map
+			});
+			
+			//Add marker for Dialcom Showroom
+			var marker3 = new google.maps.Marker({
+				position:{lat:6.9080641,lng:79.8529507},
+				map:map
+			});
+			
+			//Add marker for Datamax mobiles
+			var marker4 = new google.maps.Marker({
+				position:{lat:6.8699,lng:79.8623},
+				map:map
+			});
+			
+			//Add marker for Oppo Lanka
+			var marker5 = new google.maps.Marker({
+				position:{lat:6.9113953,lng:79.8515284},
+				map:map
+			});
+			
+			//Add marker for Futureworld Srilanka
+			var marker6 = new google.maps.Marker({
+				position:{lat:6.8831595,lng:79.8608376},
+				map:map
+			});
+			
+			
+			
+			
+			//pop up window details for when the markers are clicked..
+			var infoWindow = new google.maps.InfoWindow({
+				content:'<h4>Abans Showroom</h6>'
+			});
+			
+			var infoWindow1 = new google.maps.InfoWindow({
+				content:'<h4>Samsung Showroom</h6>'
+			});
+			
+			var infoWindow2 = new google.maps.InfoWindow({
+				content:'<h4>Unity Mobiles</h6>'
+			});
+			
+			var infoWindow3 = new google.maps.InfoWindow({
+				content:'<h4>Dialcom Showroom</h6>'
+			});
+			
+			var infoWindow4 = new google.maps.InfoWindow({
+				content:'<h4>Datamax mobiles</h6>'
+			});
+			
+			var infoWindow5 = new google.maps.InfoWindow({
+				content:'<h4>Oppo Lanka</h6>'
+			});
+			
+			var infoWindow6 = new google.maps.InfoWindow({
+				content:'<h4>Futureworld Srilanka</h3>'
+			});
+			
+			//Abans Showroom
+			marker.addListener('click',function(){
+				infoWindow.open(map,marker);
+			});
+			
+			//Samsung Showroom
+			marker1.addListener('click',function(){
+				infoWindow1.open(map,marker1);
+			});
+			
+			//Unity mobiles
+			marker2.addListener('click',function(){
+				infoWindow2.open(map,marker2);
+			});
+			
+			//Dialcom Showroom
+			marker3.addListener('click',function(){
+				infoWindow3.open(map,marker3);
+			});
+			
+			//Datamax mobiles
+			marker4.addListener('click',function(){
+				infoWindow4.open(map,marker4);
+			});
+			
+			//Oppo Lanka
+			marker5.addListener('click',function(){
+				infoWindow5.open(map,marker5);
+			});
+			
+			//Futureworld Srilanka
+			marker6.addListener('click',function(){
+				infoWindow6.open(map,marker6);
+			});
+			
+		}
+		
+		
+		
+	//API key for accessing the functions
+	</script>
+	
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ_uZQvSPEwFeqKwNAj3ktZYUqhX0WzhA &callback=initMap">
+    </script>
+	
+	</body>
+	</html>
+	
